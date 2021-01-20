@@ -5,10 +5,8 @@ import { View, Text, FlatList, Button } from 'react-native';
 class TodoList extends Component{
 
     static defaultProps = {
-        list: [
-            {id:'1' , text:'abc'},
-            {id:'2' , text:'def'}
-        ]
+        list: [],
+        onRemove: () => {}
     }
 
     handleRow = ({item, index}) => {
@@ -17,6 +15,11 @@ class TodoList extends Component{
                 <Text>
                     {this.formatListNumber(index)} - {item.text}
                 </Text>
+                <Button 
+                    title="X"
+                    color="#731919" 
+                    onPress={() => this.props.onRemove(item)}          
+                />
             </View>
         )
     }

@@ -11,11 +11,12 @@ class TodoList extends Component{
 
     handleRow = ({item, index}) => {
         return(
-            <View>
-                <Text>
+            <View style={{flexDirection: 'row', margin: 5}}>
+                <Text style={{flex: 1}}>
                     {this.formatListNumber(index)} - {item.text}
                 </Text>
                 <Button 
+                    style={{width: 30}}
                     title="X"
                     color="#731919" 
                     onPress={() => this.props.onRemove(item)}          

@@ -1,5 +1,4 @@
-
-import Constants from 'expo';
+import Constants from 'expo-constants'
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import TodoList from './components/TodoList';
@@ -15,5 +14,6 @@ export default function App() {
 
 const styles = StyleSheet.create({
   container: {
+    paddingTop: Constants.statusBarHeight + 5
   },
 });
